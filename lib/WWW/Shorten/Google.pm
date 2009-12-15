@@ -143,7 +143,8 @@ WWW::Shorten::Google -  Perl interface to goo.gl
 
   $short_url = makeashorterlink($long_url, 'YOUR goo.gl USER NAME');
 
-=head1 DESCRIPTION                                                                                                                                                                   
+=head1 DESCRIPTION
+
 WWW::Shorten::Google is Perl interface to the web api goo.gl.
 
 =head1 Functions
