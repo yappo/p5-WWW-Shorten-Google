@@ -10,8 +10,9 @@ SYNOPSIS
 
       $short_url = makeashorterlink($long_url, 'YOUR goo.gl USER NAME');
 
-DESCRIPTION                                                                                                                                                                   
-WWW::Shorten::Google is Perl interface to the web api goo.gl.
+DESCRIPTION
+    WWW::Shorten::Google is Perl interface to the web api goo.gl.
+
 Functions
   makeashorterlink
     The function "makeashorterlink" will call the Google URL Shortener web
