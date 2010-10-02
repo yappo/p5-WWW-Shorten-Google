@@ -19,14 +19,7 @@ sub makeashorterlink {
         }
     );
 
-    if ( $res->is_redirect ) {
-        return $1 if $res->header('location') =~ /url=(.*)/;
-    }
-    elsif ( $res->is_success ) {
-        if ( $res->content =~ /id="result".*?value="(.*?)"/i ) {
-            return $1;
-        }
-    }
+    return $1 if $res->is_redirect && $res->header('location') =~ /url=(.*)/;
 
     return;
 }
