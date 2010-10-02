@@ -8,8 +8,6 @@ SYNOPSIS
       $short_url = makeashorterlink($long_url);
       $long_url  = makealongerlink($short_url);
 
-      $short_url = makeashorterlink($long_url, 'YOUR goo.gl USER NAME');
-
 DESCRIPTION
     WWW::Shorten::Google is Perl interface to the web api goo.gl.
 
@@ -30,8 +28,7 @@ AUTHOR
     Kazuhiro Osawa <yappo <at> shibuya <döt> pl>
 
 SEE ALSO
-    WWW::Shorten, <http://goo.gl/>, my idea takes by
-    <http://www.kix.in/blog/2009/12/goo-gl/>
+    WWW::Shorten, <http://goo.gl/>
 
 LICENSE
     This library is free software; you can redistribute it and/or modify it
