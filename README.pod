@@ -32,6 +32,8 @@ If anything goes wrong, then either function will return C<undef>.
 
 Kazuhiro Osawa E<lt>yappo <at> shibuya <döt> plE<gt>
 
+sunnavy
+
 =head1 SEE ALSO
 
 L<WWW::Shorten>, L<http://goo.gl/>
