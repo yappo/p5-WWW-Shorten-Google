@@ -19,9 +19,9 @@ sub makeashorterlink {
         }
     );
 
-    return $1 if $res->is_redirect && $res->header('location') =~ /url=(.*)/;
-
-    return;
+    return unless $res->is_redirect;
+    my($tiny_url) = $res->header('location') =~ /url=(.+)/;
+    return $tiny_url;
 }
 
 sub makealongerlink {
