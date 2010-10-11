@@ -19,9 +19,9 @@ sub makeashorterlink {
         }
     );
 
-    return $1 if $res->is_redirect && $res->header('location') =~ /url=(.*)/;
-
-    return;
+    return unless $res->is_redirect;
+    my($tiny_url) = $res->header('location') =~ /url=(.+)/;
+    return $tiny_url;
 }
 
 sub makealongerlink {
@@ -72,6 +72,8 @@ If anything goes wrong, then either function will return C<undef>.
 =head1 AUTHOR
 
 Kazuhiro Osawa E<lt>yappo <at> shibuya <döt> plE<gt>
+
+sunnavy
 
 =head1 SEE ALSO
 
