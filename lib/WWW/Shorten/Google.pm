@@ -11,16 +11,15 @@ use Carp;
 sub makeashorterlink {
     my $uri = shift or croak 'No URL passed to makeashorterlink';
     my $ua  = __PACKAGE__->ua();
+    my $content = '{"longUrl": "'.$uri.'"}';
     my $res = $ua->post(
-        'http://goo.gl/action/shorten',
-        {
-            url    => $uri,
-            authed => 1,
-        }
+	'https://www.googleapis.com/urlshortener/v1/url',
+	'Content-Type' => 'application/json',
+	Content => $content,
     );
 
-    return unless $res->is_redirect;
-    my($tiny_url) = $res->header('location') =~ /url=(.+)/;
+    return unless $res->is_success;
+    my($tiny_url) = $res->content =~ /"id": "(.+?)",/o;
     return $tiny_url;
 }
 
