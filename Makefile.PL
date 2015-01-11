@@ -5,6 +5,8 @@ readme_from     'lib/WWW/Shorten/Google.pm';
 readme_pod_from 'lib/WWW/Shorten/Google.pm';
 
 requires 'WWW::Shorten';
+requires 'JSON::PP';
+requires 'LWP::Protocol::https';
 
 tests 't/*.t';
 author_tests 'xt';
